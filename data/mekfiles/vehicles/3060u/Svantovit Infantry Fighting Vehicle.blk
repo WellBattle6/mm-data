@@ -15,7 +15,7 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#Saved from version 0.50.12 on 2026-02-26
+#Saved from version 0.51.00-nightly-2026-05-01 on 2026-05-02
 <UnitType>
 Tank
 </UnitType>
@@ -25,27 +25,27 @@ Svantovit Infantry Fighting Vehicle
 </Name>
 
 <Model>
-
+(ATM) 'Masada'
 </Model>
 
 <mul id:>
-3139
+3137
 </mul id:>
 
 <year>
-2870
+3069
 </year>
 
 <originalBuildYear>
-2870
+3069
 </originalBuildYear>
 
 <type>
-Clan Level 2
+Clan Level 3
 </type>
 
 <role>
-Missile Boat
+Striker
 </role>
 
 <motion_type>
@@ -57,16 +57,12 @@ troopspace:5.0
 </transporters>
 
 <cruiseMP>
-10
+11
 </cruiseMP>
 
 <engine_type>
-0
+2
 </engine_type>
-
-<clan_engine>
-false
-</clan_engine>
 
 <armor_type>
 1
@@ -77,7 +73,7 @@ false
 </armor_tech_rating>
 
 <armor_tech_level>
-2
+6
 </armor_tech_level>
 
 <armor>
@@ -89,52 +85,40 @@ false
 </armor>
 
 <Body Equipment>
-Clan Machine Gun Ammo - Half
-Clan Ammo LRM-5
-Clan Streak SRM 2 Ammo
-CLCASE
+Clan Ammo ATM-9
+Clan Ammo ATM-9 ER
+Clan Ammo ATM-9 HE
+CLAPGaussRifle Ammo
 </Body Equipment>
 
 <Front Equipment>
-CLLRM5
-CLLRM5
 </Front Equipment>
 
 <Right Equipment>
-CLMG
 </Right Equipment>
 
 <Left Equipment>
-CLMG
 </Left Equipment>
 
 <Rear Equipment>
 </Rear Equipment>
 
 <Turret Equipment>
-CLStreakSRM2
-CLStreakSRM2
+CLATM9
+CLAPGaussRifle
+CLAPGaussRifle
 </Turret Equipment>
 
-<source>
-TR:3060
-</source>
+<capabilities>
+<p>The 'Masada' replaces the standard fusion engine with an XL unit, pushing the vehicle's flanking speed to 183 kph while freeing weight for a significantly heavier weapons suite. The five-ton infantry compartment and three tons of Compound Alpha ferro-fibrous armor are retained from the standard Svantovit, preserving the variant's core Elemental transport function. The rear hatch deployment limitation and the associated halt-before-deployment operating procedure remain unchanged.</p><p>The turret armament is substantially upgraded. A single ATM-9 launcher fed by three tons of ammunition replaces the Streak SRM launchers, giving the 'Masada' multi-range engagement capability at the cost of the standard model's point-defense focus. A pair of anti-personnel Gauss rifles supplementing the ATM system provide effective suppression against infantry targets, though their effectiveness against armored opponents is limited. The combination makes the 'Masada' a more capable fire support vehicle than the standard Svantovit, but the lighter anti-infantry weapons and heavier reliance on the ATM system require skilled fire control to employ effectively. As with all ATM-equipped vehicles, ammunition selection determines the engagement envelope, and logistics support for multiple ATM munition types is an ongoing operational concern.</p>
+</capabilities>
 
-<tonnage>
-35.0
-</tonnage>
-
-# Fluff Date: 2026-03-11 21:02:11
 <overview>
 <p>The Svantovit Infantry Fighting Vehicle emerged during the Succession Wars era as a purpose-built transport for second-line Clan garrison forces. Originally conceived to carry conventional infantry platoons, the design was substantially reworked in 2870 to serve the more demanding requirements of Elemental Point transportation, recognizing that non-OmniMech units lacked the handholds necessary for battle armor to ride into combat. Manufactured across numerous Clan Homeworld facilities under no single producing entity, the Svantovit became a ubiquitous fixture of Clan second-line and garrison operations across virtually every Clan. Its exceptional hover speed made it well-suited to repositioning infantry assets rapidly across diverse terrain, though the vehicle's light armor demanded careful tactical employment. Few designs so thoroughly defined the logistics of non-OmniMech Elemental delivery in the era before more capable carriers became widely available.</p>
 </overview>
 
-<capabilities>
-<p>The Svantovit's fusion power plant drives it to a flanking speed of 162 kph, allowing the vehicle to cross open ground quickly when transporting Elementals to a contact point. The five-ton infantry compartment, accessible via a large rear hatch, can accommodate a full Elemental Point. That hatch is also the vehicle's most significant tactical liability: it occupies the entire rear facing, eliminating any rearward firing arc and demanding careful positioning when deploying troops. Standard operating procedure requires the Svantovit to come to a complete halt before opening the hatch, as the rapid weight shift during high-speed deceleration has been known to cause serious handling problems and crashes. Experienced crews learned to manage crash-deceleration from near-flank speed to a full stop in seconds, a technique that is rough on personnel but minimizes the vehicle's exposure during the vulnerable deployment window.</p><p>Firepower is organized to support the disembarking troops. Two Type V "Longbow" LRM-5 launchers fixed in the forward arc provide ranged suppression and can also fire indirectly. A pair of Pattern J2 Streak SRM-2 launchers in a full-traverse turret gives 360-degree defensive coverage, though the Streak guidance system requires target lock and cannot engage speculatively. Series IX Machine Guns on each side discourage enemy infantry from approaching the vehicle's flanks during troop deployment. The Streak turret cannot cover the sides of the vehicle's hull at close range, leaving a dead zone that infantry and light vehicles can exploit. Compound Alpha ferro-fibrous armor provides only three tons of protection, and the Svantovit must rely on speed and its escorts rather than durability to survive sustained fire.</p>
-</capabilities>
-
 <deployment>
-<p>The standard Svantovit was distributed to second-line and garrison formations across every Clan from 2870 onward. Clans Blood Spirit and Hell's Horses operated the greatest concentrations, fielding the vehicle in numbers that reflected their reliance on conventional forces and Elemental Points in garrison roles. Clans Star Adder and Jade Falcon operated minimal numbers, with Jade Falcon limiting use to training exercises. Inner Sphere forces gained access to the design through Clan occupation zones and salvage from the Clan Invasion onward, with Draconis Combine production eventually restarting on Irece and later at Hyner.</p>
+<p>The 'Masada' entered service with Clan Hell's Horse and Clan Snow Leopard forces primarily operating in the Homeworlds during the Jihad era. Production at Csesztreg supplied Hell's Horse touman units, while the Niles facility provided vehicles to Snow Leopard forces during the same period. The variant's combination of improved speed and heavier weapons made it a preferred Elemental transport when available, though limited production meant distribution remained concentrated among Homeworld Clan forces rather than spreading broadly to Inner Sphere theaters.</p>
 </deployment>
 
 <history>
@@ -142,11 +126,11 @@ TR:3060
 </history>
 
 <manufacturer>
-Various
+Csesztreg Industriplex Beta|Niles Industriplex Beta
 </manufacturer>
 
 <primaryFactory>
-Various
+Csesztreg|Niles
 </primaryFactory>
 
 <systemManufacturers>
@@ -159,9 +143,18 @@ TARGETING:Unknown
 
 <systemModels>
 CHASSIS:Unknown
-ENGINE:175
+ENGINE:XL
 ARMOR:Compound Alpha Ferro-Fibrous
 COMMUNICATIONS:Type 2I
 TARGETING:Series II GPS
 </systemModels>
+
+<source>
+TR:3060
+</source>
+
+<tonnage>
+35.0
+</tonnage>
+
 
