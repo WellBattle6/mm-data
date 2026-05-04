@@ -24,6 +24,17 @@ capital: Terra
 yearsActive:
   - start: 2571
     end: 2780
+fallBackFactions:
+  - TH
+  - LA
+  - FS
+  - CC
+  - FWL
+  - DC
+  - MOC
+  - OA
+  - RWR
+  - TC
 tags:
   - PLAYABLE
   - IS
