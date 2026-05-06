@@ -130,6 +130,10 @@ CLMediumPulseLaser
 TR:3057r
 </source>
 
+<published>
+RS:Aero2
+</published>
+
 <tonnage>
 200.0
 </tonnage>

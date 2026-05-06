@@ -137,6 +137,10 @@ Added 1 point to aft armor. Reduced fuel by .5 tons.
 His:LoT2,His:LoT1
 </source>
 
+<published>
+His:LoT2,His:LoT1
+</published>
+
 <tonnage>
 75.0
 </tonnage>

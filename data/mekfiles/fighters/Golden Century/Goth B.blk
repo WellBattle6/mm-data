@@ -143,6 +143,10 @@ CLERLargeLaser:OMNI
 TR:GC
 </source>
 
+<published>
+TR:GC
+</published>
+
 <tonnage>
 60.0
 </tonnage>
