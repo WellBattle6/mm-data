@@ -50,14 +50,14 @@ armor:Ferro-Fibrous(Clan)
 LA armor:22
 RA armor:20
 LT armor:24
-RT armor:15
-CT armor:22
-HD armor:6
-LL armor:12
-RL armor:12
+RT armor:20
+CT armor:26
+HD armor:9
+LL armor:17
+RL armor:17
 RTL armor:5
-RTR armor:2
-RTC armor:4
+RTR armor:4
+RTC armor:6
 
 Weapons:6
 ER Medium Laser, Left Arm
