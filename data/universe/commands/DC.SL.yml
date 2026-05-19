@@ -23,3 +23,39 @@ ratingLevels:
   - A
 fallBackFactions:
   - DC
+
+# --- Specific units of this command (future structured data) ------------------
+# Future state: the entries below become a real `units:` block so the force
+# generator can reproduce named regiments with their canonical battalion
+# composition instead of a random weight roll. Kept commented until the
+# per-unit schema is agreed; every line is prefixed with "# " so uncommenting
+# yields valid YAML once the schema lands.
+#
+# units:
+#   - name: First Sword of Light
+#     nickname: Ivory Dragon
+#     formation: reinforced Mek regiment
+#     battalionWeights: [Medium, Medium, Heavy, Assault]
+#     notes: >
+#       The Sword of Light regiment most focused on bushido. Specializes in
+#       night combat; posted on Luthien to safeguard the Coordinator, so it
+#       sees less action than its sister regiments. Conventional forces are
+#       attached as the mission or posting requires.
+#   - name: Second Sword of Light
+#     nickname: Steel Dragon
+#     formation: reinforced Mek regiment
+#     battalionWeights: [Light, Heavy, Heavy, Assault]
+#     notes: >
+#       Long-standing flagship regiment of the DCMS. The only Sword of Light
+#       combat command with permanently-attached conventional forces, and it
+#       fields twice the standard number of aerospace fighters.
+#   - name: Fifth Sword of Light
+#     nickname: Gold Dragon
+#     formation: reinforced Mek regiment
+#     battalionWeights: [Light, Medium, Heavy, Heavy]
+#     notes: >
+#       Urban-warfare reputation built on the maxim that the end justifies the
+#       means. Badly mauled in the Fourth Succession War and the War of 3039
+#       and is currently being rebuilt. Conventional and aerospace forces are
+#       attached as the mission or posting requires.
+# ------------------------------------------------------------------------------
