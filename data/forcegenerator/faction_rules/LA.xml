@@ -228,26 +228,32 @@ each Mek regiment. -->
             </subforceOption>
         </subforces>
 
+        <!-- Battalion -> Company weight distribution. Each option set is biased toward the
+             matching weight class (weight 4 on the all-same option, falling off through the mixes)
+             so picking, e.g., Assault produces predominantly Assault companies instead of the
+             previous flat 1/1/1 weights which averaged only 67% match. The canonical Lance/Star
+             Weight Composition tables (era-agnostic) cover the leaf layer; this is the matching
+             bias for the upper cascade so an Assault selection actually reads as Assault. -->
         <subforces>
             <subforceOption ifWeightClass="A">
-                <option weightClass="A,A,A">%COMPANY%</option>
-                <option weightClass="A,A,H">%COMPANY%</option>
-                <option weightClass="A,H,H">%COMPANY%</option>
+                <option weightClass="A,A,A" weight="4">%COMPANY%</option>
+                <option weightClass="A,A,H" weight="2">%COMPANY%</option>
+                <option weightClass="A,H,H" weight="1">%COMPANY%</option>
             </subforceOption>
             <subforceOption ifWeightClass="H">
-                <option weightClass="A,H,H">%COMPANY%</option>
-                <option weightClass="H,H,H">%COMPANY%</option>
-                <option weightClass="H,H,M">%COMPANY%</option>
+                <option weightClass="A,H,H" weight="1">%COMPANY%</option>
+                <option weightClass="H,H,H" weight="4">%COMPANY%</option>
+                <option weightClass="H,H,M" weight="2">%COMPANY%</option>
             </subforceOption>
             <subforceOption ifWeightClass="M">
-                <option weightClass="H,M,M">%COMPANY%</option>
-                <option weightClass="M,M,M">%COMPANY%</option>
-                <option weightClass="M,M,L">%COMPANY%</option>
+                <option weightClass="H,M,M" weight="1">%COMPANY%</option>
+                <option weightClass="M,M,M" weight="4">%COMPANY%</option>
+                <option weightClass="M,M,L" weight="2">%COMPANY%</option>
             </subforceOption>
             <subforceOption ifWeightClass="L">
-                <option weightClass="M,M,L">%COMPANY%</option>
-                <option weightClass="M,L,L">%COMPANY%</option>
-                <option weightClass="L,L,L">%COMPANY%</option>
+                <option weightClass="M,M,L" weight="1">%COMPANY%</option>
+                <option weightClass="M,L,L" weight="2">%COMPANY%</option>
+                <option weightClass="L,L,L" weight="4">%COMPANY%</option>
             </subforceOption>
         </subforces>
 
@@ -368,6 +374,19 @@ each Mek regiment. -->
                 <option weight="1" ifWeightClass="L|M|H">Sweep</option>
                 <option weight="1">Fire</option>
                 <option weight="1">Security</option>
+            </formation>
+
+            <!-- For non-command Assault-weight lances, override the index-based formation roll
+                 with an Assault-family bias so the formation builder pulls 60+ ton 'Mechs (canon
+                 Lance Weight Composition for an Assault Lance averages ~67% Assault 'Mechs).
+                 Fires AFTER the index-based blocks and wins because the last matching <formation>
+                 block sets the formation property. Without this, the index-0/1 block's Battle (20)
+                 and Heavy Battle (14) outweigh Assault (6) even when the lance is weight class A. -->
+            <formation ifRole="!command" ifWeightClass="A">
+                <option weight="6">Assault</option>
+                <option weight="3">Heavy Battle</option>
+                <option weight="2">Heavy Striker/Cavalry</option>
+                <option weight="1">Berserker/Close</option>
             </formation>
         </ruleGroup>
 
