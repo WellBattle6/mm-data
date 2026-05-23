@@ -33,7 +33,7 @@ fallBackFactions:
 # Proposed schema (era-aware): each unit carries a `history` list; each entry
 # applies from its `era` year until the next entry's year, matching how the
 # force generator already gates rules with ifDateBetween. `battalionWeights` is
-# the per-battalion weight class of the 'Mech regiment and is omitted where the
+# the per-battalion weight class of the Mek regiment and is omitted where the
 # source records none. All Sword of Light regiments are four-battalion
 # ("expanded" / reinforced) regiments.
 #
