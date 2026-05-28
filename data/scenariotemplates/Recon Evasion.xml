@@ -39,7 +39,7 @@ The enemy will control the field at the end of the engagement, meaning there wil
         <mapLocation>AllGroundTerrain</mapLocation>
         <useStandardAtBSizing>true</useStandardAtBSizing>
         <additionalMapSheetTall>1</additionalMapSheetTall>
-        <additionalMapSheetWide>0</additionalMapSheetWide>
+        <additionalMapSheetWide>1</additionalMapSheetWide>
         <widthScalingIncrement>10</widthScalingIncrement>
     </mapParameters>
     <scenarioForces>
