@@ -550,6 +550,17 @@ Has limited benefit if the functional appraisal option is not enabled in campaig
         <weight>1</weight>
     </ability>
     <ability>
+        <lookupName>unofficial_embezzler</lookupName>
+        <displayName>Embezzler (Unofficial)</displayName>
+        <desc><![CDATA[At the end of each month, some money goes missing. Nobody knows where. It's probably fine.]]></desc>
+        <xpCost>-100</xpCost>
+        <originOnly>false</originOnly>
+        <skillPrereq>
+            <skill>Administration::Regular</skill>
+        </skillPrereq>
+        <weight>1</weight>
+    </ability>
+    <ability>
         <lookupName>unofficial_paper_surgeon</lookupName>
         <displayName>Paper Surgeon (Unofficial)</displayName>
         <desc><![CDATA[This character is an excellent surgeon, on paper. Increases the Target Number for all Surgery/Any checks by 2.]]></desc>
