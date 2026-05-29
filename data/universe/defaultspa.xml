@@ -1694,6 +1694,20 @@ While this SPA does exist in ATOW, these effects are unique to MekHQ.]]></desc>
         <skillPrereq />
     </ability>
     <ability>
+        <lookupName>unofficial_holistic_care</lookupName>
+        <displayName>Expert Holistic Care (Unofficial)</displayName>
+        <desc><![CDATA[Each day this doctor has a 1-in-20 of reducing a patient's healing time by 2 days, instead of 1. The doctor rolls once per patient per injury.
+
+This only has an effect if Advanced Medical's alternative mode is enabled.]]></desc>
+        <xpCost>200</xpCost>
+        <originOnly>false</originOnly>
+        <skillPrereq>
+            <skill>Administration::Veteran</skill>
+        </skillPrereq>
+        <weight>1</weight>
+        <skillPrereq />
+    </ability>
+    <ability>
         <lookupName>compulsion_pathologic_racism</lookupName>
         <displayName>Significant Compulsion - Pathologic Racism (ATOW)</displayName>
         <desc><![CDATA[-2 Reputation.
