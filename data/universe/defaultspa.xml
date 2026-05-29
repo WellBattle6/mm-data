@@ -524,6 +524,21 @@ Has no benefit to a character without the Admin/Transport profession.]]></desc>
         <weight>1</weight>
     </ability>
     <ability>
+        <lookupName>unofficial_bargain_hunter</lookupName>
+        <displayName>Bargain Hunter (Unofficial)</displayName>
+        <desc><![CDATA[Adds a +1 modifier to Appraisal rolls.
+
+This is useful for procurement characters as it increases the chance they will find a bargain (discount) on purchased parts.
+
+Has limited benefit if the functional appraisal option is not enabled in campaign options.]]></desc>
+        <xpCost>100</xpCost>
+        <originOnly>false</originOnly>
+        <skillPrereq>
+            <skill>Appraisal::Regular</skill>
+        </skillPrereq>
+        <weight>1</weight>
+    </ability>
+    <ability>
         <lookupName>unofficial_houdini</lookupName>
         <displayName>Houdini (Unofficial)</displayName>
         <desc><![CDATA[Decreases the Target Number for all Escape Artist checks by 2.]]></desc>
