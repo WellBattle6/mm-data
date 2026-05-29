@@ -511,6 +511,19 @@
 
     <!-- Misc SPA -->
     <ability>
+        <lookupName>unofficial_transport_negotiator</lookupName>
+        <displayName>Transport Negotiator (Unofficial)</displayName>
+        <desc><![CDATA[Decreases all transport costs by 5%. Multiple characters with this SPA do not stack their benefits.
+
+Has no benefit to a character without the Admin/Transport profession.]]></desc>
+        <xpCost>100</xpCost>
+        <originOnly>false</originOnly>
+        <skillPrereq>
+            <skill>Administration::Regular</skill>
+        </skillPrereq>
+        <weight>1</weight>
+    </ability>
+    <ability>
         <lookupName>unofficial_houdini</lookupName>
         <displayName>Houdini (Unofficial)</displayName>
         <desc><![CDATA[Decreases the Target Number for all Escape Artist checks by 2.]]></desc>
@@ -597,7 +610,9 @@ If this character is the senior-most Admin/Command character, the number of cont
         <displayName>Tetris Master (Unofficial)</displayName>
         <desc><![CDATA[This character has mastered the subtle art of stacking cargo boxes.
 
-The campaign's cargo capacity is increased by 5% per character with this SPA.]]></desc>
+The campaign's cargo capacity is increased by 5% per character with this SPA.
+
+This SPA only confers a benefit if the character has either the Admin/Logistics or Admin/Transport roles.]]></desc>
         <xpCost>100</xpCost>
         <originOnly>false</originOnly>
         <weight>1</weight>
