@@ -1723,6 +1723,38 @@ This only has an effect if Advanced Medical's alternative mode is enabled.]]></d
         <skillPrereq />
     </ability>
     <ability>
+        <lookupName>unofficial_trauma_surgeon</lookupName>
+        <displayName>Trauma Surgeon (Unofficial)</displayName>
+        <desc><![CDATA[The more badly injured a patient is, the harder they are to heal. This trait decreases the injury penalty by 1.
+
+Does not affect the healing penalty incurred by permanent modifications, such as prosthetics.
+
+This only has an effect if Advanced Medical's alternative mode is enabled.]]></desc>
+        <xpCost>100</xpCost>
+        <originOnly>false</originOnly>
+        <skillPrereq>
+            <skill>Administration::Veteran</skill>
+        </skillPrereq>
+        <weight>1</weight>
+        <skillPrereq />
+    </ability>
+    <ability>
+        <lookupName>unofficial_prothesis_technician</lookupName>
+        <displayName>Experienced Prothesis Technician (Unofficial)</displayName>
+        <desc><![CDATA[The more locations that have been replaced by prosthetics, or implants, the harder a patient is to heal. This trait decreases the penalty by 1.
+
+Does not affect the healing penalty incurred by normal injuries.
+
+This only has an effect if Advanced Medical's alternative mode is enabled.]]></desc>
+        <xpCost>100</xpCost>
+        <originOnly>false</originOnly>
+        <skillPrereq>
+            <skill>Administration::Regular</skill>
+        </skillPrereq>
+        <weight>1</weight>
+        <skillPrereq />
+    </ability>
+    <ability>
         <lookupName>compulsion_pathologic_racism</lookupName>
         <displayName>Significant Compulsion - Pathologic Racism (ATOW)</displayName>
         <desc><![CDATA[-2 Reputation.
