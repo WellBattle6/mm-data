@@ -1757,7 +1757,6 @@ This only has an effect if Advanced Medical's alternative mode is enabled.]]></d
             <skill>Surgery/Any::Veteran</skill>
         </skillPrereq>
         <weight>1</weight>
-        <skillPrereq />
     </ability>
     <ability>
         <lookupName>unofficial_trauma_surgeon</lookupName>
@@ -1770,8 +1769,16 @@ This only has an effect if Advanced Medical's alternative mode is enabled.]]></d
         <xpCost>100</xpCost>
         <originOnly>false</originOnly>
         <skillPrereq>
-            <skill>Surgery/Any::Veteran</skill>
+            <skill>Surgery/Any::Regular</skill>
         </skillPrereq>
+        <weight>1</weight>
+    </ability>
+    <ability>
+        <lookupName>unofficial_useless_talent</lookupName>
+        <displayName>Useless Talent (Unofficial)</displayName>
+        <desc><![CDATA[The character has a talent. It's not very useful. Has no mechanical effect, but they like showing it off at parties.]]></desc>
+        <xpCost>100</xpCost>
+        <originOnly>false</originOnly>
         <weight>1</weight>
         <skillPrereq />
     </ability>
@@ -1789,7 +1796,6 @@ This only has an effect if Advanced Medical's alternative mode is enabled.]]></d
             <skill>Surgery/Any::Regular</skill>
         </skillPrereq>
         <weight>1</weight>
-        <skillPrereq />
     </ability>
     <ability>
         <lookupName>compulsion_pathologic_racism</lookupName>
