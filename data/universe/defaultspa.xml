@@ -561,6 +561,17 @@ Has limited benefit if the functional appraisal option is not enabled in campaig
         <weight>1</weight>
     </ability>
     <ability>
+        <lookupName>unofficial_loses_paperwork</lookupName>
+        <displayName>Constantly Loses Paperwork (Unofficial)</displayName>
+        <desc><![CDATA[Increases the Target Number for all Administration checks by 2.]]></desc>
+        <xpCost>-100</xpCost>
+        <originOnly>false</originOnly>
+        <skillPrereq>
+            <skill>Administration::Regular</skill>
+        </skillPrereq>
+        <weight>1</weight>
+    </ability>
+    <ability>
         <lookupName>unofficial_patient_educator</lookupName>
         <displayName>Patient Educator (Unofficial)</displayName>
         <desc><![CDATA[Decreases the Target Number for all Training checks by 2.]]></desc>
