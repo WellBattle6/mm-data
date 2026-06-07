@@ -33,10 +33,14 @@
     slightly heavier than the standard.-->
 
     <toc>
+        <!-- Jade Falcon fields no vehicles before 3055 (strict reading of the Clan's anti-vehicle
+             doctrine). Tank and VTOL only become available from 3055 on, when the reconciled
+             support/APC vehicle usage begins. Before then the touman is Mek/Elemental/aero only. -->
         <unitType>
             <option ifDateBetween="3060,3072">null,Mek,ProtoMek,Tank,VTOL,Infantry,BattleArmor,AeroSpaceFighter,Conventional Fighter,Warship,Dropship,Jumpship</option>
-            <option ifDateBetween="2870,">null,Mek,Tank,VTOL,Infantry,BattleArmor,AeroSpaceFighter,Conventional Fighter,Warship,Dropship,Jumpship</option>
-            <option ifDateBetween=",2869">null,Mek,Tank,VTOL,Infantry,AeroSpaceFighter,Conventional Fighter,Warship,Dropship,Jumpship</option>
+            <option ifDateBetween="3055,">null,Mek,Tank,VTOL,Infantry,BattleArmor,AeroSpaceFighter,Conventional Fighter,Warship,Dropship,Jumpship</option>
+            <option ifDateBetween="2870,3054">null,Mek,Infantry,BattleArmor,AeroSpaceFighter,Conventional Fighter,Warship,Dropship,Jumpship</option>
+            <option ifDateBetween=",2869">null,Mek,Infantry,AeroSpaceFighter,Conventional Fighter,Warship,Dropship,Jumpship</option>
         </unitType>
 
         <echelon>
@@ -789,13 +793,13 @@
 
         <attachedForces ifRating="PG|Sol">
             <subforceOption>
-                <option unitType="Tank" weight="1" name="Binary Artillery"
+                <option unitType="Tank" ifDateBetween="3055," weight="1" name="Binary Artillery"
                         role="artillery">%BINARY%
                 </option>
-                <option unitType="Tank" ifDateBetween="2950,"
+                <option unitType="Tank" ifDateBetween="3055,"
                         weight="2" name="Trinary Support">%TRINARY%
                 </option>
-                <option unitType="Tank" ifDateBetween="2950,"
+                <option unitType="Tank" ifDateBetween="3055,"
                         weight="2" name="Binary Support">%BINARY%
                 </option>
                 <option weight="2" />
@@ -829,12 +833,6 @@
                 <option weightClass="M" unitType="Mek"
                         weight="1">%STAR%
                 </option>
-                <option weightClass="H" unitType="Tank"
-                        ifDateBetween=",3000" weight="2">%STAR%
-                </option>
-                <option weightClass="M" unitType="Tank"
-                        ifDateBetween=",3000" weight="1">%STAR%
-                </option>
             </subforceOption>
             <subforceOption ifWeightClass="M">
                 <option weightClass="H" unitType="Mek"
@@ -846,15 +844,6 @@
                 <option weightClass="L" unitType="Mek"
                         weight="1">%STAR%
                 </option>
-                <option weightClass="H" unitType="Tank"
-                        ifDateBetween=",3000" weight="1">%STAR%
-                </option>
-                <option weightClass="M" unitType="Tank"
-                        ifDateBetween=",3000" weight="2">%STAR%
-                </option>
-                <option weightClass="L" unitType="Tank"
-                        ifDateBetween=",3000" weight="1">%STAR%
-                </option>
             </subforceOption>
             <subforceOption ifWeightClass="L">
                 <option weightClass="M" unitType="Mek"
@@ -862,12 +851,6 @@
                 </option>
                 <option weightClass="L" unitType="Mek"
                         weight="2">%STAR%
-                </option>
-                <option weightClass="M" unitType="Tank"
-                        ifDateBetween=",3000" weight="1">%STAR%
-                </option>
-                <option weightClass="L" unitType="Tank"
-                        ifDateBetween=",3000" weight="2">%STAR%
                 </option>
             </subforceOption>
 
@@ -877,12 +860,6 @@
                 </option>
                 <option weightClass="M" unitType="Mek"
                         weight="1">%STAR%
-                </option>
-                <option weightClass="H" unitType="Tank"
-                        ifDateBetween=",2950" weight="2">%STAR%
-                </option>
-                <option weightClass="M" unitType="Tank"
-                        ifDateBetween=",2950" weight="1">%STAR%
                 </option>
                 <option unitType="Infantry"
                         weightClass="H" weight="2">%STAR%
@@ -906,15 +883,6 @@
                 </option>
                 <option weightClass="L" unitType="Mek"
                         weight="1">%STAR%
-                </option>
-                <option weightClass="H" unitType="Tank"
-                        ifDateBetween=",2950" weight="1">%STAR%
-                </option>
-                <option weightClass="M" unitType="Tank"
-                        ifDateBetween=",2950" weight="2">%STAR%
-                </option>
-                <option weightClass="L" unitType="Tank"
-                        ifDateBetween=",2950" weight="1">%STAR%
                 </option>
                 <option unitType="Infantry"
                         weightClass="H" weight="1">%STAR%
@@ -941,12 +909,6 @@
                 </option>
                 <option weightClass="L" unitType="Mek"
                         weight="2">%STAR%
-                </option>
-                <option weightClass="M" unitType="Tank"
-                        ifDateBetween=",2950" weight="1">%STAR%
-                </option>
-                <option weightClass="L" unitType="Tank"
-                        ifDateBetween=",2950" weight="2">%STAR%
                 </option>
                 <option unitType="Infantry"
                         weightClass="M" weight="2">%STAR%
@@ -1298,10 +1260,10 @@
                 <option unitType="Infantry"
                         weightClass="M">%STAR%
                 </option>
-                <option unitType="Tank" role="apc"
+                <option unitType="Tank" role="apc" ifDateBetween="3055,"
                         weightClass="H" weight="2">%STAR%
                 </option>
-                <option unitType="Tank" role="apc"
+                <option unitType="Tank" role="apc" ifDateBetween="3055,"
                         weightClass="M">%STAR%
                 </option>
             </subforceOption>
@@ -1315,13 +1277,13 @@
                 <option unitType="Infantry"
                         weightClass="L" weight="1">%STAR%
                 </option>
-                <option unitType="Tank" role="apc"
+                <option unitType="Tank" role="apc" ifDateBetween="3055,"
                         weightClass="H" weight="1">%STAR%
                 </option>
-                <option unitType="Tank" role="apc"
+                <option unitType="Tank" role="apc" ifDateBetween="3055,"
                         weightClass="M" weight="2">%STAR%
                 </option>
-                <option unitType="Tank" role="apc"
+                <option unitType="Tank" role="apc" ifDateBetween="3055,"
                         weightClass="L" weight="1">%STAR%
                 </option>
             </subforceOption>
@@ -1332,10 +1294,10 @@
                 <option unitType="Infantry"
                         weightClass="L">%STAR%
                 </option>
-                <option unitType="Tank" role="apc"
+                <option unitType="Tank" role="apc" ifDateBetween="3055,"
                         weightClass="M">%STAR%
                 </option>
-                <option unitType="Tank" role="apc"
+                <option unitType="Tank" role="apc" ifDateBetween="3055,"
                         weightClass="L">%STAR%
                 </option>
             </subforceOption>
@@ -1564,10 +1526,10 @@
                 <option unitType="Infantry"
                         weightClass="M">%STAR%
                 </option>
-                <option unitType="Tank" role="apc"
+                <option unitType="Tank" role="apc" ifDateBetween="3055,"
                         weightClass="H" weight="2">%STAR%
                 </option>
-                <option unitType="Tank" role="apc"
+                <option unitType="Tank" role="apc" ifDateBetween="3055,"
                         weightClass="M">%STAR%
                 </option>
             </subforceOption>
@@ -1581,13 +1543,13 @@
                 <option unitType="Infantry"
                         weightClass="L" weight="1">%STAR%
                 </option>
-                <option unitType="Tank" role="apc"
+                <option unitType="Tank" role="apc" ifDateBetween="3055,"
                         weightClass="H" weight="1">%STAR%
                 </option>
-                <option unitType="Tank" role="apc"
+                <option unitType="Tank" role="apc" ifDateBetween="3055,"
                         weightClass="M" weight="2">%STAR%
                 </option>
-                <option unitType="Tank" role="apc"
+                <option unitType="Tank" role="apc" ifDateBetween="3055,"
                         weightClass="L" weight="1">%STAR%
                 </option>
             </subforceOption>
@@ -1598,10 +1560,10 @@
                 <option unitType="Infantry"
                         weightClass="L">%STAR%
                 </option>
-                <option unitType="Tank" role="apc"
+                <option unitType="Tank" role="apc" ifDateBetween="3055,"
                         weightClass="M">%STAR%
                 </option>
-                <option unitType="Tank" role="apc"
+                <option unitType="Tank" role="apc" ifDateBetween="3055,"
                         weightClass="L">%STAR%
                 </option>
             </subforceOption>

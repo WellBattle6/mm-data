@@ -307,7 +307,15 @@ but have a smaller aerospace arm than most other Clans. -->
         <name ifRating="PG">Provisional Garrison Cluster</name>
         <co>%STAR_COL%</co>
 
+        <!-- Ghost Bear is the heaviest Clan (canon +1 weight-class modifier) and fights direct
+             assaults with heavy/assault Meks. Assault clusters roll a real share (weight 2, above
+             Coyote's 1), and the per-cluster targets push assault density past what the trinary
+             rolls reach on their own. Aerospace and Battle Armor are left as-is (already canon). -->
+        <weightTarget ifWeightClass="A" unitType="Mek" spread="8">A:55,H:40,M:5,L:0</weightTarget>
+        <weightTarget ifWeightClass="H" unitType="Mek" spread="8">A:35,H:52,M:11,L:2</weightTarget>
+
         <weightClass>
+            <option weight="2">A</option>
             <option weight="4">H</option>
             <option weight="2">M</option>
             <option ifRole="!command" weight="1">L</option>

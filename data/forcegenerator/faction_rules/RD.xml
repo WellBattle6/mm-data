@@ -309,7 +309,15 @@ but have a smaller aerospace arm than most other Clans. -->
         <name ifRating="PG">Provisional Garrison Cluster</name>
         <co>%STAR_COL%</co>
 
+        <!-- Inherits Ghost Bear doctrine: heaviest-Clan weight (+1 modifier) and direct assaults
+             with heavy/assault Meks. Assault clusters roll a real share (weight 2), and the
+             per-cluster targets push assault density past the trinary rolls. Aerospace and Battle
+             Armor are left as-is (already canon). Matches the CGB tuning. -->
+        <weightTarget ifWeightClass="A" unitType="Mek" spread="8">A:55,H:40,M:5,L:0</weightTarget>
+        <weightTarget ifWeightClass="H" unitType="Mek" spread="8">A:35,H:52,M:11,L:2</weightTarget>
+
         <weightClass>
+            <option weight="2">A</option>
             <option weight="4">H</option>
             <option weight="2">M</option>
             <option ifRole="!command" weight="1">L</option>

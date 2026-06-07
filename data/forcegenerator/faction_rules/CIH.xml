@@ -153,6 +153,17 @@
                 <option weightClass="M,L,L" role="-command"
                 >%CLUSTER%
                 </option>
+                <!-- Larger 4-cluster galaxies (canon: Ice Hellion galaxies run 3-5 clusters).
+                     Kept light/medium to preserve the speed doctrine. -->
+                <option weightClass="M,M,M,L" role="-command"
+                >%CLUSTER%
+                </option>
+                <option weightClass="M,M,L,L" role="-command"
+                >%CLUSTER%
+                </option>
+                <option weightClass="H,M,M,L" role="-command"
+                >%CLUSTER%
+                </option>
             </subforceOption>
             <subforceOption ifWeightClass="A|H">
                 <option weightClass="A,H" role="-command"
@@ -184,6 +195,17 @@
                 </option>
                 <option weightClass="H,M,L" role="-command"
                         weight="2">%CLUSTER%
+                </option>
+                <!-- Larger 4-cluster galaxies (canon: 3-5 clusters). Delta carries the heavier
+                     front-line equipment, so its larger forms keep more heavy weight. -->
+                <option weightClass="H,H,M,L" role="-command"
+                >%CLUSTER%
+                </option>
+                <option weightClass="H,H,M,M" role="-command"
+                >%CLUSTER%
+                </option>
+                <option weightClass="H,M,M,L" role="-command"
+                >%CLUSTER%
                 </option>
             </subforceOption>
         </subforces>
