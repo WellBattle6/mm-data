@@ -42,7 +42,7 @@
 
         <echelon>
             <option ifUnitType="">%TOUMAN%,%GALAXY%,%CLUSTER%</option>
-            <option ifUnitType="Warship">%CLUSTER%</option>
+            <option ifUnitType="Warship">%CLUSTER%,%STAR%</option>
             <option ifUnitType="Dropship|Jumpship">%STAR%</option>
             <option ifUnitType="Mek" ifDateBetween="2870,">%TRINARY%^,%TRINARY%,%BINARY%^,%BINARY%,%STAR%^,%STAR%</option>
             <option>%TRINARY%,%BINARY%,%STAR%</option>
@@ -210,6 +210,14 @@
             </subforceOption>
         </subforces>
 
+        <!-- Cage's Pride is the fixed flagship of Alpha Galaxy - the one Ice Hellion WarShip that
+             does NOT rotate among the Galaxies (per the circa-3058 source); lost at Vantaa in 3072. -->
+        <attachedForces>
+            <subforce ifName="Alpha Galaxy" unitType="Warship" flags="+navalFluff"
+                      name="Alpha Naval Star" ifDateBetween=",3072">%STAR%
+            </subforce>
+        </attachedForces>
+
         <attachedForces>
             <subforce ifRating="SL|PG|Sol" ifDateBetween="3063,"
                       flags="+flurry" rating="Sol">%CLUSTER%
@@ -235,48 +243,84 @@
         </subforces>
     </force>
 
+    <!-- The fleet is organized into two Warship Stars (Alpha = capital ships, Bravo = lighter
+         combatants and transports) plus JumpShip support. The Ice Hellion fleet was annihilated
+         3071-3074 (Operation ICE STORM and the Wars of Reaving), so the star attaches are date-gated
+         to drop out as they are wiped: Alpha (gone 3072) and Bravo (gone 3074); after 3074 only the
+         JumpShip star remains, which avoids an empty warship star collapsing into a stray hull. -->
     <force echelon="%CLUSTER%" eschName="Fleet" ifUnitType="Warship">
         <name>Naval Reserve</name>
         <co>%GALAXY_CMDR%</co>
 
         <subforces>
-            <subforce name="CIH Cage&apos;s Pride" role="command"
+            <subforce flags="+navalFluff" role="command" ifDateBetween=",3072">%STAR%</subforce>
+            <subforce flags="+navalFluff" ifDateBetween=",3074">%STAR%</subforce>
+            <subforce unitType="Jumpship" num="2">%STAR%</subforce>
+        </subforces>
+    </force>
+
+    <!-- Per-ship loss dates from Clan Ice Hellion Naval Forces (Sarna). Ships with no recorded loss
+         (Impaler, Radiant, Hellion's Pride, Coterie, Maker) end at the 3074 fleet disbandment. The
+         sole survivor, the ex-Smoke Jaguar Potemkin Osis' Pride, passed to Clan Goliath Scorpion
+         (see CGS.xml). Largest hull commands each star (tonnage sort). -->
+    <force echelon="%STAR%" eschName="Naval Star" ifUnitType="Warship" ifFlags="navalFluff">
+        <name>Warship Star {phonetic}</name>
+        <co>%STAR_CMDR%</co>
+
+        <!-- Alpha Galaxy's fixed flagship (does not rotate): the McKenna Cage's Pride, lost at
+             Vantaa 3072. Attached from the Alpha Galaxy node, padded with JumpShip escorts. -->
+        <subforces ifName="Alpha Naval Star">
+            <subforce fluffName="CIH Cage&apos;s Pride" role="command" ifDateBetween=",3072"
                       chassis="McKenna Battleship">%ELEMENT%
             </subforce>
-            <subforce name="CIH Coterie"
-                      chassis="Potemkin Troop Cruiser">%ELEMENT%
-            </subforce>
-            <subforce name="CIH Taney"
+            <subforceOption>
+                <option num="3" unitType="Jumpship">%ELEMENT%</option>
+                <option num="4" unitType="Jumpship">%ELEMENT%</option>
+            </subforceOption>
+        </subforces>
+
+        <!-- Star Alpha: the heavy combatants of the rotating Naval Reserve. -->
+        <subforces ifRole="command" ifName="!Alpha Naval Star">
+            <subforce fluffName="CIH Taney" ifDateBetween=",3071"
                       chassis="Aegis Heavy Cruiser">%ELEMENT%
             </subforce>
-            <subforce name="CIH Chaos Sailor"
+            <subforce fluffName="CIH Chaos Sailor" ifDateBetween=",3072"
                       chassis="Aegis Heavy Cruiser">%ELEMENT%
             </subforce>
-            <subforce name="CIH Pack Leader" ifDateBetween="2950,"
-                      chassis="York Destroyer-Carrier">%ELEMENT%
-            </subforce>
-            <subforce name="CIH Moore&apos;s Honor"
+            <subforce fluffName="CIH Moore&apos;s Honor" ifDateBetween=",3071"
                       chassis="Essex II Destroyer">%ELEMENT%
             </subforce>
-            <subforce name="CIH Cold Hunter"
+            <!-- Pack Leader was claimed by Clan Hell's Horses as isorla at Vantaa in 3072 and
+                 renamed Stampede (see CHH.xml), so it leaves the touman after 3071. -->
+            <subforce fluffName="CIH Pack Leader" ifDateBetween="2950,3071"
+                      chassis="York Destroyer-Carrier">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CIH Cold Hunter" ifDateBetween=",3072"
                       chassis="Lola III Destroyer">%ELEMENT%
             </subforce>
-            <subforce name="CIH Impaler"
+        </subforces>
+
+        <!-- Star Bravo: lighter destroyers, corvettes, and transports. -->
+        <subforces ifRole="!command" ifName="!Alpha Naval Star">
+            <subforce fluffName="CIH Impaler" ifDateBetween=",3074"
                       chassis="Lola III Destroyer">%ELEMENT%
             </subforce>
-            <subforce name="CIH Radiant"
+            <subforce fluffName="CIH Radiant" ifDateBetween=",3074"
                       chassis="Lola III Destroyer">%ELEMENT%
             </subforce>
-            <subforce name="CIH Swift Bait" ifDateBetween="2965,"
+            <subforce fluffName="CIH Swift Bait" ifDateBetween="2965,3071"
                       chassis="Fredasa (Corvette-Raider)">%ELEMENT%
             </subforce>
-            <subforce name="CIH Hellion&apos;s Pride" ifDateBetween="2965,"
+            <subforce fluffName="CIH Hellion&apos;s Pride" ifDateBetween="2965,3074"
                       chassis="Fredasa (Corvette-Raider)">%ELEMENT%
             </subforce>
-            <subforce name="CIH Whelp" ifDateBetween="2965,"
+            <subforce fluffName="CIH Whelp" ifDateBetween="2965,3072"
                       chassis="Fredasa (Corvette-Raider)">%ELEMENT%
             </subforce>
-            <subforce name="CIH Maker" ifDateBetween="2950,"
+            <subforce fluffName="CIH Coterie" ifDateBetween=",3074"
+                      chassis="Potemkin Troop Cruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CIH Maker" ifDateBetween="2950,3074"
                       chassis="Carrack Transport">%ELEMENT%
             </subforce>
         </subforces>

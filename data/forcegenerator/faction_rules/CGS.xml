@@ -1181,6 +1181,11 @@
             <subforce fluffName="CGS Corona Borealis" ifDateBetween=",3073"
                       chassis="Aegis Heavy Cruiser">%ELEMENT%
             </subforce>
+            <!-- Osis' Pride: ex-Smoke Jaguar Potemkin that passed to the Goliath Scorpions via the
+                 Clan Ice Hellion absorption (3073); scrapped 3076. -->
+            <subforce fluffName="CGS Osis&apos; Pride" ifDateBetween="3073,3076"
+                      chassis="Potemkin Troop Cruiser">%ELEMENT%
+            </subforce>
         </subforces>
 
         <subforces ifName="Imperio Naval Reserve">

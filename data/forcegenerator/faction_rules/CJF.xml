@@ -45,7 +45,7 @@
 
         <echelon>
             <option ifUnitType="">%TOUMAN%,%GALAXY%,%CLUSTER%</option>
-            <option ifUnitType="Warship">%CLUSTER%</option>
+            <option ifUnitType="Warship">%CLUSTER%,%STAR%</option>
             <option ifUnitType="Dropship|Jumpship">%STAR%</option>
             <option ifUnitType="Mek" ifDateBetween="2870,">%TRINARY%^,%TRINARY%,%BINARY%^,%BINARY%,%STAR%^,%STAR%</option>
             <option>%TRINARY%,%BINARY%,%STAR%</option>
@@ -141,32 +141,42 @@
         </attachedForces>
     </force>
 
+    <!-- The Jade Falcon naval reserve (circa 3058) is organized into two named WarShip Stars -
+         Emerald Talon (the front-line battle star around the Nightlord flagship) and Falcon Stoop
+         (a post-Revival convoy-escort star of Aegis cruisers) - plus a pooled command star (the
+         Cameron flagship, the Texas, and the Black Lion Aeries) and a support star of frigates,
+         destroyers, and transports. JumpShips pad the formation so a date-thinned star never
+         collapses into a stray hull. -->
     <force echelon="%CLUSTER%" eschName="Fleet" ifUnitType="Warship">
         <name>Naval Reserve</name>
         <co>%GALAXY_CMDR%</co>
 
         <subforces>
-            <subforce fluffName="CJF Turkina's Pride" role="command"
-                      chassis="Cameron Battlecruiser">%ELEMENT%
+            <subforce flags="+navalFluff" name="Emerald Talon Star">%STAR%</subforce>
+            <subforce flags="+navalFluff" name="Falcon Stoop Star">%STAR%</subforce>
+            <subforce flags="+navalFluff" name="Naval Reserve Command Star">%STAR%</subforce>
+            <subforce flags="+navalFluff" name="Naval Reserve Support Star">%STAR%</subforce>
+            <!-- Seven Snow Raven Aegis cruisers leased to the Falcons for Operation Revival
+                 (3050-3060), recalled to the Raven touman by 3061 (see CSR.xml). They keep their
+                 CSR registry names while in Falcon service. -->
+            <subforce flags="+navalFluff" name="Snow Raven Contract Star"
+                      ifDateBetween="3050,3060">%STAR%
             </subforce>
-            <subforce fluffName="CJF Emerald Talon"
-                      ifDateBetween="2860,3136"
+            <subforce unitType="Jumpship" num="2">%STAR%</subforce>
+        </subforces>
+    </force>
+
+    <!-- Per-ship dates from Clan Jade Falcon Naval Forces (Sarna). Largest hull commands each star
+         (tonnage sort). The two ex-Ice Hellion captures - Chaos Sailor (taken at Vantaa 3072) and
+         Swift Bait (taken 3071, renamed Jade Tornado after 3085) - join the Falcon Stoop escort
+         star (see CIH.xml). -->
+    <force echelon="%STAR%" eschName="Naval Star" ifUnitType="Warship" ifFlags="navalFluff">
+        <co>%STAR_CMDR%</co>
+
+        <!-- Emerald Talon Star: front-line battle star built around the Nightlord flagship. -->
+        <subforces ifName="Emerald Talon Star">
+            <subforce fluffName="CJF Emerald Talon" role="command" ifDateBetween="2860,3136"
                       chassis="Nightlord Battleship">%ELEMENT%
-            </subforce>
-            <subforce fluffName="CJF Falcon's Nest" ifDateBetween=",3073"
-                      chassis="Texas Battleship">%ELEMENT%
-            </subforce>
-            <subforce fluffName="CJF Jade Aerie"
-                      chassis="Black Lion II Battlecruiser">%ELEMENT%
-            </subforce>
-            <subforce fluffName="CJF Blue Aerie" ifDateBetween=",3073"
-                      chassis="Black Lion II Battlecruiser">%ELEMENT%
-            </subforce>
-            <subforce fluffName="CJF White Aerie"
-                      chassis="Black Lion II Battlecruiser">%ELEMENT%
-            </subforce>
-            <subforce fluffName="CJF Hawker" ifDateBetween=",3078"
-                      chassis="Sovetskii Soyuz Heavy Cruiser">%ELEMENT%
             </subforce>
             <subforce fluffName="CJF Jade Talon"
                       chassis="Aegis Heavy Cruiser">%ELEMENT%
@@ -174,7 +184,18 @@
             <subforce fluffName="CJF Gold Talon"
                       chassis="Aegis Heavy Cruiser">%ELEMENT%
             </subforce>
-            <subforce fluffName="CJF Red Talon"
+            <subforce fluffName="CJF Janice Hazen" ifDateBetween=",3072"
+                      chassis="Aegis Heavy Cruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CJF Frost Falcon" ifDateBetween=",3078"
+                      chassis="Aegis Heavy Cruiser">%ELEMENT%
+            </subforce>
+        </subforces>
+
+        <!-- Falcon Stoop Star: post-Revival convoy-escort star of Aegis cruisers, plus the two
+             ex-Ice Hellion captures. -->
+        <subforces ifName="Falcon Stoop Star">
+            <subforce fluffName="CJF Red Talon" role="command"
                       chassis="Aegis Heavy Cruiser">%ELEMENT%
             </subforce>
             <subforce fluffName="CJF White Talon" ifDateBetween=",3062"
@@ -186,37 +207,89 @@
             <subforce fluffName="CJF Blue Talon"
                       chassis="Aegis Heavy Cruiser">%ELEMENT%
             </subforce>
-            <subforce fluffName="CJF Janice Hazen" ifDateBetween=",3072"
-                      chassis="Aegis Heavy Cruiser">%ELEMENT%
-            </subforce>
-            <subforce fluffName="CJF Frost Falco" ifDateBetween=",3078"
-                      chassis="Aegis Heavy Cruiser">%ELEMENT%
-            </subforce>
             <subforce fluffName="CJF Hawk Eye" ifDateBetween=",3073"
                       chassis="Aegis Heavy Cruiser">%ELEMENT%
             </subforce>
-            <subforce fluffName="CJF Gauntlet" ifDateBetween="3024,3073"
-                      chassis="Liberator Cruiser">%ELEMENT%
+            <subforce fluffName="CJF Kerensky&apos;s Blues" ifDateBetween="2965,3055"
+                      chassis="Fredasa (Corvette-Raider)">%ELEMENT%
             </subforce>
+            <subforce fluffName="CJF Chaos Sailor" ifDateBetween="3072,3144"
+                      chassis="Aegis Heavy Cruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CJF Swift Bait" ifDateBetween="3072,3084"
+                      chassis="Fredasa (Corvette-Raider)">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CJF Jade Tornado" ifDateBetween="3085,"
+                      chassis="Fredasa (Corvette-Raider)">%ELEMENT%
+            </subforce>
+        </subforces>
+
+        <!-- Naval Reserve Command Star: the Cameron flagship, the Texas, and the Black Lion Aeries. -->
+        <subforces ifName="Naval Reserve Command Star">
+            <subforce fluffName="CJF Turkina&apos;s Pride" role="command"
+                      chassis="Cameron Battlecruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CJF Falcon&apos;s Nest" ifDateBetween=",3073"
+                      chassis="Texas Battleship">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CJF Jade Aerie"
+                      chassis="Black Lion II Battlecruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CJF Blue Aerie" ifDateBetween=",3070"
+                      chassis="Black Lion II Battlecruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CJF White Aerie"
+                      chassis="Black Lion II Battlecruiser">%ELEMENT%
+            </subforce>
+        </subforces>
+
+        <!-- Naval Reserve Support Star: frigates, destroyers, corvettes, and transports. -->
+        <subforces ifName="Naval Reserve Support Star">
             <subforce fluffName="CJF Green Lantern" ifDateBetween=",3078"
                       chassis="Congress Frigate">%ELEMENT%
             </subforce>
             <subforce fluffName="CJF Kerensky&apos;s Pride"
                       chassis="Congress Frigate">%ELEMENT%
             </subforce>
+            <subforce fluffName="CJF Gauntlet" ifDateBetween="3024,3070"
+                      chassis="Liberator Cruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CJF Hawker" ifDateBetween=",3078"
+                      chassis="Sovetskii Soyuz Heavy Cruiser">%ELEMENT%
+            </subforce>
             <subforce fluffName="CJF Emerald Tornado"
                       chassis="Whirlwind Destroyer">%ELEMENT%
-            </subforce>
-            <subforce fluffName="CJF Kerensky&apos;s Blues"
-                      ifDateBetween="2965,"
-                      chassis="Fredasa (Corvette-Raider)">%ELEMENT%
             </subforce>
             <subforce fluffName="CJF Lightning Strike" ifDateBetween=",3072"
                       chassis="Vincent Corvette">%ELEMENT%
             </subforce>
-            <subforce fluffName="CJF Ironhold Provider"
-                      ifDateBetween="2950,3070"
+            <subforce fluffName="CJF Ironhold Provider" ifDateBetween="2950,3070"
                       chassis="Carrack Transport">%ELEMENT%
+            </subforce>
+        </subforces>
+
+        <!-- Snow Raven Contract Star: seven leased Aegis cruisers, gated to the contract window. -->
+        <subforces ifName="Snow Raven Contract Star">
+            <subforce fluffName="CSR Scabbard" role="command" ifDateBetween="3050,3060"
+                      chassis="Aegis Heavy Cruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CSR Blue Lancer" ifDateBetween="3050,3060"
+                      chassis="Aegis Heavy Cruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CSR White Terror" ifDateBetween="3050,3060"
+                      chassis="Aegis Heavy Cruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CSR Blue Quest" ifDateBetween="3050,3060"
+                      chassis="Aegis Heavy Cruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CSR Lord Death" ifDateBetween="3050,3060"
+                      chassis="Aegis Heavy Cruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CSR Black Justice" ifDateBetween="3050,3060"
+                      chassis="Aegis Heavy Cruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CSR Morning Violence" ifDateBetween="3050,3055"
+                      chassis="Aegis Heavy Cruiser">%ELEMENT%
             </subforce>
         </subforces>
     </force>

@@ -72,7 +72,7 @@
         </subforces>
 
         <attachedForces>
-            <subforce unitType="Warship" fluffName="CFM Anathma"
+            <subforce unitType="Warship" fluffName="CFM Anathema"
                       chassis="Lola III Destroyer">%ELEMENT%
             </subforce>
             <subforce unitType="Warship" fluffName="CFM Howler"

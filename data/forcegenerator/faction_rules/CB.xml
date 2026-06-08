@@ -35,7 +35,7 @@
         <echelon>
             <option ifUnitType="">%TOUMAN%,%GALAXY%,%CLUSTER%</option>
             <option ifUnitType="Mek" ifDateBetween="2870,">%TRINARY%^,%TRINARY%,%BINARY%^,%BINARY%,%STAR%^,%STAR%</option>
-            <option ifUnitType="Warship">%CLUSTER%</option>
+            <option ifUnitType="Warship">%STAR%</option>
             <option ifUnitType="Dropship|Jumpship">%STAR%</option>
             <option>%TRINARY%,%BINARY%,%STAR%</option>
         </echelon>
@@ -96,7 +96,7 @@
         </subforces>
 
         <attachedForces>
-            <subforce unitType="Warship">%CLUSTER%</subforce>
+            <subforce unitType="Warship">%STAR%</subforce>
         </attachedForces>
     </force>
 
@@ -132,9 +132,9 @@
         </subforces>
     </force>
 
-    <force echelon="%CLUSTER%" eschName="Fleet" ifUnitType="Warship">
-        <name>Naval Assets</name>
-        <co>%GALAXY_CMDR%</co>
+    <force echelon="%STAR%" eschName="Naval Star" ifUnitType="Warship">
+        <name>Burrock Naval Star</name>
+        <co>%STAR_CMDR%</co>
 
         <subforces ifDateBetween=",3059">
             <subforce chassis="Avatar Heavy Cruiser" ifDateBetween=",3024"

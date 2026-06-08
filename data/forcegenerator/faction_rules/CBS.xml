@@ -153,8 +153,13 @@
                 <option num="5">%CLUSTER%</option>
             </subforceOption>
             <!-- Aerospace lives with the combat galaxies now (one ASF cluster per front-line
-                 galaxy, listed after the combat clusters) rather than pooled in the naval reserve. -->
-            <subforce unitType="AeroSpaceFighter">%CLUSTER%</subforce>
+                 galaxy) rather than pooled in the naval reserve. Wrapped in a subforceOption so
+                 the engine generates it AFTER the combat clusters: SubForcesNode emits all plain
+                 <subforce> elements before any <subforceOption>, so a plain aero subforce would
+                 sort to the top of the galaxy regardless of XML order. -->
+            <subforceOption>
+                <option unitType="AeroSpaceFighter">%CLUSTER%</option>
+            </subforceOption>
         </subforces>
 
         <subforces ifRating="SL">
