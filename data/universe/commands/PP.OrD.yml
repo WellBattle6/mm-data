@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,33 +15,19 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-key: MALC
-name: Malthus Confederation
-# Phase 2 pin: canonical-parent rank system, set explicitly so Faction2.getRankSystem()
-# does not recurse through fallBackFactions. Adjust if BattleTech canon for this
-# faction warrants a different rank table.
-rankSystem: SLDF
-sucsCodes:
-  - MaC
-capital: Dustball
+# Pentagon Civil War Major Faction (2821) - Dagda (Dratha); 3 mixed veteran battalions.
+key: PP.OrD
+name: Oriente Dominion
 yearsActive:
-  - start: 3151
+  - start: 2802
+    end: 2821
 tags:
   - MINOR
-  - IS
+  - DEEP_PERIPHERY
+  - SPECIAL
 color:
-  red: 93
-  green: 133
-  blue: 147
-eraMods:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 1
+  red: 160
+  green: 160
+  blue: 160
+fallBackFactions:
+  - PP

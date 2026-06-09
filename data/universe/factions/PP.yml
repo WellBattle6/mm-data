@@ -23,7 +23,7 @@ name: Pentagon Powers
 rankSystem: SLDF
 sucsCodes: []  # no SUCS equivalent
 yearsActive:
-  - start: 2801
-    end: 2822
+  - start: 2802
+    end: 2821
 fallBackFactions:
   - SL
