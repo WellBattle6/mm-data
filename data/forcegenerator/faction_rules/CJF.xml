@@ -380,11 +380,33 @@
         <name ifWeightClass="L">Striker Cluster</name>
         <co>%STAR_COL%</co>
 
+        <!-- Per-cluster-type weight targets (budget allocator). Clan Jade Falcon doctrine
+             (Clan Jade Falcon Touman, Sarna) is aggressive and Crusader: front-line Galaxies
+             are OmniMek-heavy with a strong assault core (the Turkina Keshik especially),
+             while Beak (heavy-medium) and Eye (light-medium) Stars round out a full-spread but
+             heavy-leaning force. Talon clusters lead heavy/assault; Battle clusters heavy-medium;
+             Striker (Eye) clusters are light-medium but still Falcon-aggressive. Picker (A1/H3/M2/L1)
+             plus these targets land the faction blend ~L13/M35/H36/A16 - heavier than most Clans.
+             NOTE: Striker/Eye clusters DO appear (~14% by name, driven by the L picker roll). The
+             forcegen_weights.csv rolledWeight column logs each cluster's post-recalc AVERAGE class,
+             which never reaches Light for a combined-arms Clan (the Elemental + fighter + command
+             stars pull the average up), so "rolled=L = 0" there is expected and not a missing type. -->
+        <weightTarget ifWeightClass="A" unitType="Mek" spread="8">A:40,H:38,M:18,L:4</weightTarget>
+        <weightTarget ifWeightClass="H" unitType="Mek" spread="8">A:20,H:46,M:28,L:6</weightTarget>
+        <weightTarget ifWeightClass="M" unitType="Mek" spread="8">A:6,H:30,M:48,L:16</weightTarget>
+        <weightTarget ifWeightClass="L" unitType="Mek" spread="8">A:2,H:14,M:44,L:40</weightTarget>
+        <!-- Aerospace is a Falcon strength (heavy/medium fighters); no assault-class fighters exist. -->
+        <weightTarget unitType="AeroSpaceFighter" spread="8">A:0,H:35,M:45,L:20</weightTarget>
+        <!-- Combat vehicles are rare and disdained (post-3055 only) - light/medium 2nd-line support. -->
+        <weightTarget unitType="Tank" spread="8">A:0,H:15,M:40,L:45</weightTarget>
+
         <weightClass>
-            <option weight="2">H</option>
+            <option weight="1">A</option>
+            <option weight="3">H</option>
             <option weight="2">M</option>
             <option weight="1">L</option>
             <option ifRole="command">H</option>
+            <option ifRating="Keshik">A</option>
             <option ifRating="Keshik">H</option>
         </weightClass>
 

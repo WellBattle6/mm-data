@@ -354,6 +354,22 @@
         <name ifRating="SL|PG|Sol">Hector Cavaliers</name>
         <co>%STAR_COL%</co>
 
+        <!-- Per-cluster-type weight targets (budget allocator). Clan Ice Hellion doctrine
+             (Clan Ice Hellion Touman, Sarna) is the lightest, fastest Clan: light-to-medium
+             OmniMeks, speed over armor. Heavy/assault machines survive mainly as fast garrison
+             units (Gargoyle, Linebacker). The galaxy/cluster structure already routes the elite
+             front line to light-medium galaxies and pushes heavies into second-line garrison;
+             these element targets reinforce the speed bias within each weight band - minimal
+             assault, light-dominant Attack (L) clusters, medium-led Lancer (M) clusters. -->
+        <weightTarget ifWeightClass="A" unitType="Mek" spread="8">A:45,H:38,M:15,L:2</weightTarget>
+        <weightTarget ifWeightClass="H" unitType="Mek" spread="8">A:8,H:45,M:37,L:10</weightTarget>
+        <weightTarget ifWeightClass="M" unitType="Mek" spread="8">A:2,H:18,M:55,L:25</weightTarget>
+        <weightTarget ifWeightClass="L" unitType="Mek" spread="8">A:1,H:7,M:37,L:55</weightTarget>
+        <!-- Aero trended heavier over time (Visigoth, Sabutai) after dogfighting losses; medium-heavy. -->
+        <weightTarget unitType="AeroSpaceFighter" spread="8">A:0,H:40,M:42,L:18</weightTarget>
+        <!-- Vehicles: speed bias (hovercraft/VTOL, incl. the freeborn Flurry Clusters) - light/medium. -->
+        <weightTarget unitType="Tank" spread="8">A:0,H:12,M:38,L:50</weightTarget>
+
         <weightClass>
             <option weight="1">H</option>
             <option weight="2">M</option>
