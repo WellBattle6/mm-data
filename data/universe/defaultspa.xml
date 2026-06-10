@@ -2253,6 +2253,11 @@ While this SPA does exist in ATOW, these effects are unique to MekHQ.]]></desc>
         <desc><![CDATA[Use Edge for commander negotiation failure when generating new contracts.]]></desc>
     </ability>
     <ability>
+        <lookupName>edge_when_recon_fail</lookupName>
+        <displayName>Use Edge for Scouting failure.</displayName>
+        <desc><![CDATA[Failed scouting checks will be rerolled with edge.]]></desc>
+    </ability>
+    <ability>
         <lookupName>edge_when_training_fail</lookupName>
         <displayName>Use Edge for training operation failure.</displayName>
         <desc><![CDATA[Failed training checks made during training operations will be rerolled with edge.]]></desc>
