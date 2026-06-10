@@ -25,6 +25,8 @@ sucsCodes:
   - PR
 capital: Regulus
 yearsActive:
+  - start: 2243
+    end: 2317
   - start: 3079
     end: 3086
 successor: RF
