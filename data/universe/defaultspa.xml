@@ -1506,6 +1506,23 @@ Furthermore, the character reduces the target number of all Sensor Operations ch
         </skillPrereq>
     </ability>
     <ability>
+        <lookupName>unofficial_ill_do_it_myself</lookupName>
+        <displayName>I'll Do It Myself (Unofficial)</displayName>
+        <desc><![CDATA[Is a one-person team. Requires no astech or medic assistants.
+
+Has no effect on a character without a Tech/Any (non-vessel) or Doctor profession.]]></desc>
+        <xpCost>100</xpCost>
+        <originOnly>false</originOnly>
+        <weight>1</weight>
+        <skillPrereq>
+            <skill>Tech/Aero::Veteran</skill>
+            <skill>Tech/Mechanic::Veteran</skill>
+            <skill>Tech/Mek::Veteran</skill>
+            <skill>Tech/BattleArmor::Veteran</skill>
+            <skill>Surgery/Any::Veteran</skill>
+        </skillPrereq>
+    </ability>
+    <ability>
         <lookupName>tech_maintainer</lookupName>
         <displayName>Maintainer (Unofficial)</displayName>
         <desc><![CDATA[The tech is slow and methodical at their work. They take a +1 penalty to their repair rolls, but are better at maintaining units than most, with a -1 bonus.]]></desc>
@@ -2196,6 +2213,11 @@ While this SPA does exist in ATOW, these effects are unique to MekHQ.]]></desc>
         <desc><![CDATA[Healing check critical failure will be rerolled with Edge.]]></desc>
     </ability>
     <ability>
+        <lookupName>edge_when_advanced_surgery_fail</lookupName>
+        <displayName>Use Edge for Advanced Surgery failure.</displayName>
+        <desc><![CDATA[Advanced Surgery failure will be rerolled with Edge.]]></desc>
+    </ability>
+    <ability>
         <lookupName>edge_when_repair_break_part</lookupName>
         <displayName>Use Edge for tech breaking part.</displayName>
         <desc><![CDATA[Failed repair check that breaks the part will be rerolled with Edge.]]></desc>
@@ -2234,6 +2256,16 @@ While this SPA does exist in ATOW, these effects are unique to MekHQ.]]></desc>
         <lookupName>edge_when_admin_fail_appraisal</lookupName>
         <displayName>Use Edge for procurement cost appraisal failure.</displayName>
         <desc><![CDATA[Failed appraisal checks made to reduce procurement costs will be rerolled with edge.]]></desc>
+    </ability>
+    <ability>
+        <lookupName>edge_when_commander_negotiation_fail</lookupName>
+        <displayName>Use Edge for commander contract negotiations.</displayName>
+        <desc><![CDATA[Use Edge for commander negotiation failure when generating new contracts.]]></desc>
+    </ability>
+    <ability>
+        <lookupName>edge_when_recon_fail</lookupName>
+        <displayName>Use Edge for Scouting failure.</displayName>
+        <desc><![CDATA[Failed scouting checks will be rerolled with edge.]]></desc>
     </ability>
 
     <!-- Example entries corresponding to the examples in customspa.xml
