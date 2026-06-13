@@ -165,7 +165,10 @@ planet:
         faction:
           source: canon
           value:
-            - CLAN
+            - CGB
+            - CJF
+            - CGS
+            - CHH
       - date: '2864-12-31'
         faction:
           source: SUCS

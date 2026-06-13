@@ -135,7 +135,10 @@ planet:
         faction:
           source: canon
           value:
-            - CLAN
+            - CMG
+            - CNC
+            - CSR
+            - CWOV
       - date: '2822-12-31'
         faction:
           source: SUCS

@@ -119,7 +119,9 @@ planet:
         faction:
           source: canon
           value:
-            - CLAN
+            - CGS
+            - CSV
+            - CSA
         population: 8849.0
         socioIndustrial: B-C-C-C-F
       - date: '2821-12-31'

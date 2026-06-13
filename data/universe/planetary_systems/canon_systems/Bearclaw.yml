@@ -112,7 +112,8 @@ planet:
         faction:
           source: canon
           value:
-            - CLAN
+            - CGB
+            - CNC
       - date: '2821-12-31'
         faction:
           source: SUCS

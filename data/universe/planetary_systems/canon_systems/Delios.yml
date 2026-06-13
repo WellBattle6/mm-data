@@ -126,7 +126,7 @@ planet:
         faction:
           source: canon
           value:
-            - CLAN
+            - CDS
       - date: '2821-12-31'
         faction:
           source: SUCS

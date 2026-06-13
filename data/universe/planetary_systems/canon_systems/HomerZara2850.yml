@@ -204,7 +204,9 @@ planet:
         faction:
           source: canon
           value:
-            - CLAN
+            - CCC
+            - CSJ
+            - CSV
       - date: '3025-12-31'
         faction:
           source: SUCS

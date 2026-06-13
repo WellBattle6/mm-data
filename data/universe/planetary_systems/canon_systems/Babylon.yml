@@ -184,7 +184,10 @@ planet:
         faction:
           source: canon
           value:
-            - CLAN
+            - CCO
+            - CCC
+            - CDS
+            - CIH
       - date: '2864-12-31'
         faction:
           source: SUCS

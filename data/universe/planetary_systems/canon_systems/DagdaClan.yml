@@ -220,7 +220,11 @@ planet:
         faction:
           source: canon
           value:
-            - CLAN
+            - CGS
+            - CFM
+            - CSA
+            - CW
+            - CJF
       - date: '2864-12-31'
         faction:
           source: SUCS
