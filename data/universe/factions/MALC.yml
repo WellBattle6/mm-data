@@ -15,7 +15,7 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-key: MalC
+key: MALC
 name: Malthus Confederation
 # Phase 2 pin: canonical-parent rank system, set explicitly so Faction2.getRankSystem()
 # does not recurse through fallBackFactions. Adjust if BattleTech canon for this

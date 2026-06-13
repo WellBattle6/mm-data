@@ -395,7 +395,7 @@ planet:
         faction:
           source: canon
           value:
-            - MalC
+            - MALC
       - date: '3151-12-31'
         faction:
           source: SUCS
@@ -407,7 +407,7 @@ planet:
           source: SUCS
           version: 2026.03.02
           value:
-            - MalC
+            - MALC
   - name: Hestenes's Hold
     type: ICE_GIANT
     orbitalDist: 17.0

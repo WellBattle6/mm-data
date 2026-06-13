@@ -305,11 +305,6 @@ planet:
         population: 456203602.0
       - date: '3079-12-31'
         faction:
-          source: canon
-          value:
-            - MSC
-      - date: '3079-12-31'
-        faction:
           source: SUCS
           version: 2026.03.02
           value:
