@@ -567,7 +567,7 @@ planet:
             - CHH
       - date: '3151-01-01'
         faction:
-          source: sucs
+          source: SUCS
           value:
             - CHH
   - name: Berg im Drautal

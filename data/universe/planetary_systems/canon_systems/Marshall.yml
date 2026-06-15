@@ -232,7 +232,7 @@ planet:
             - CSV
       - date: '3059-12-12'
         faction:
-          source: sarna
+          source: Sarna
           value:
             - CGS
             - CSV

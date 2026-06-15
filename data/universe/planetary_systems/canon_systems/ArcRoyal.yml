@@ -379,7 +379,7 @@ planet:
         population: 2049886673.0
       - date: '3057-01-01'
         hiringHall:
-          source: Mercenary FM revised
+          source: 'Field Manual: Mercenaries, Revised'
           value: STANDARD
       - date: '3057-11-20'
         faction:
