@@ -930,7 +930,7 @@
              id="tspan134">No Critical Hit</tspan><tspan
              x="115.71"
              y="16"
-             id="tspan135">Copilot Hit</tspan><tspan
+             id="tspan135">Co-Pilot Hit</tspan><tspan
              x="192.85001"
              y="16"
              id="tspan136">Weapon Malfunction</tspan><tspan
@@ -1008,13 +1008,13 @@
              id="tspan160">Weapon Destroyed</tspan><tspan
              x="192.85001"
              y="56"
-             id="tspan161">RotorsDestroyed</tspan><tspan
+             id="tspan161">Ammunition**</tspan><tspan
              x="292.03"
              y="56"
-             id="tspan162">Ammunition**</tspan><tspan
+             id="tspan162">Engine Hit</tspan><tspan
              x="391.20999"
              y="56"
-             id="tspan163">Engine Hit</tspan><tspan
+             id="tspan163">Rotors Destroyed</tspan><tspan
              x="468.35001"
              y="56"
              id="tspan164">Ammunition**</tspan><tspan
@@ -1029,7 +1029,7 @@
              id="tspan167">Fuel Tank*</tspan><tspan
              x="391.20999"
              y="64"
-             id="tspan168">RotorsDestroyed</tspan><tspan
+             id="tspan168">Rotors Destroyed</tspan><tspan
              x="468.35001"
              y="64"
              id="tspan169">Turret Blown Off</tspan></text>
